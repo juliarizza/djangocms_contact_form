@@ -1,0 +1,8 @@
+{% load cms_tags %}
+
+<span>
+    <label for="{{ instance.html_id }}">{{ instance.label }}</label>
+    <input type="email" id="{{ instance.html_id }}" name="{{ instance.html_name }}" class="{{ instance.html_classes }}"
+        placeholder="{{ instance.html_placeholder }}" value="{{ instance.default_value }}"
+        {% if instance.required %}required{% endif %}>
+</span>

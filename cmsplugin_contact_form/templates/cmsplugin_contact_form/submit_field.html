@@ -1,0 +1,11 @@
+{% load cms_tags %}
+
+<span>
+    {% if instance.type == 'button' %}
+    <button type="submit" value="{{ instance.label }}" class="{{ instance.html_classes }}" id="{{ instance.html_id }}"
+        name="{{ instance.html_name }}">{{ instance.label }}</button>
+    {% elif instance.type == 'input' %}
+    <input type="submit" value="{{ instance.label }}" class="{{ instance.html_classes }}" id="{{ instance.html_id }}"
+        name="{{ instance.html_name }}" />
+    {% endif %}
+</span>

@@ -1,0 +1,9 @@
+{% load cms_tags %}
+
+<form action="" method="POST" class="{{ instance.html_classes }}">
+    {% csrf_token %}
+
+    {% for plugin in instance.child_plugin_instances %}
+    {% render_plugin plugin %}
+    {% endfor %}
+</form>
